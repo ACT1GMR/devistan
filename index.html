@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Devistan</title>
+    <link rel="stylesheet" href="devistan/widgets/css/reset.min.css"/>
+    <link rel="stylesheet" href="devistan/widgets/css/bootstrap.css"/>
+    <link rel="stylesheet" href="devistan/widgets/css/common.style.css"/>
+    <link rel="stylesheet" href="devistan/widgets/css/main.style.css"/>
+
+</head>
+<script type="text/javascript">
+    var dojoConfig = (function () {
+        var base = location.href.split('#')[0].split("/");
+        base.pop();
+        base = base.join("/");
+        return { async: true, parseOnLoad: true, packages: [
+            { name: "devistan", location: base + "/devistan"}
+        ] };
+    })();
+
+</script>
+<body>
+<div data-dojo-id="Header" data-dojo-type="devistan/widgets/Header.js"></div>
+<script src="/dojo/dojo/dojo.js"></script>
+<script>
+
+
+    require([
+        "dojo/parser"
+    ], function () {
+    })
+
+</script>
+</body>
+</html>

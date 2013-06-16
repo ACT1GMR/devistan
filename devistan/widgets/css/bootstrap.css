@@ -1,0 +1,54 @@
+input[type="button"], button {
+    background: linear-gradient(to bottom, #92D8F4 0%, #70C3E4 100%) repeat scroll 0 0 transparent;
+    border-color: #7FBFD0 #5DA6BA #3E869A;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 0 1px 0 #DDDDDD, 0 1px 0 rgba(255, 255, 255, 0.2) inset;
+    color: #FFFFFF;
+    font-family: byekan,sans-serif;
+    font-size:12px;
+    height: auto;
+    margin: 3px;
+    padding: 2px;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+    width: 100px;
+}
+input[type="button"]:hover, button:hover {
+    background: linear-gradient(to bottom, #92D8F4 0%, #85CCE8 100%) repeat scroll 0 0 transparent;
+    border-color: #76B5C6 #569FB3 #3F8CA2;
+    border-style: solid;
+    border-width: 1px;
+}
+input[type="button"]:hover, button:hover {
+    background: linear-gradient(to bottom, #92D8F4 0%, #85CCE8 100%) repeat scroll 0 0 transparent;
+    border-color: #76B5C6 #569FB3 #3F8CA2;
+    border-style: solid;
+    border-width: 1px;
+}
+input[type="button"]:focus, button:focus {
+    background: linear-gradient(to bottom, #92D8F4 0%, #85CCE8 100%) repeat scroll 0 0 transparent;
+    border-color: #5EA2B5 #569FB3 #3F8CA2;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 0 1px 0 #FFFFFF, 0 1px 3px rgba(101, 101, 101, 0.3) inset;
+}
+
+input[type="text"], input[type="password"], textarea {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #DADADA;
+    border-radius: 2px 2px 2px 2px;
+    margin: 2px;
+    box-shadow: 0 1px 2px #F2F2F2 inset;
+    color: #888787;
+    padding: 4px;
+    direction: rtl;
+    -moz-transition: all 0.08s linear 0s;
+    width: auto;
+}
+input[type="text"]:hover, input[type="password"]:hover, textarea:hover {
+    border-color: #C8C8C8;
+}
+input[type="text"]:focus, input[type="password"]:focus, textarea:focus {
+    box-shadow: 0 1px 2px #D9D9D9 inset,0 0 7px rgba(121, 188, 214, 0.61);
+    border-color: #3287B4;
+}
