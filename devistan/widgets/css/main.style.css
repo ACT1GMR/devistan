@@ -2,15 +2,19 @@
     font-family: 'BKoodakBold';
     src: url('fonts/BKoodakBold.eot?#') format('eot'), url('fonts/BKoodakBold.woff') format('woff'), url('fonts/BKoodakBold.ttf') format('truetype');
 }
+
 @font-face {
     font-family: 'BYekan';
     src: url('fonts/BYekan.eot?#') format('eot'), url('fonts/BYekan.woff') format('woff'), url('fonts/BYekan.ttf') format('truetype');
 }
-body{}
-body,html{}
+
+body {
+}
+
+body, html {
+}
+
 /*header design*/
-
-
 
 div.header {
     background: none repeat scroll 0 0 #F7F7F7;
@@ -20,10 +24,11 @@ div.header {
     height: 55px;
     position: relative;
 }
-div.header div.login,div.header div.register {
+
+div.header div.login, div.header div.register {
     background: none repeat scroll 0 0 #F7F7F7;
     border: 1px solid #DADADA;
-    border-top:0 none;
+    border-top: 0 none;
     box-shadow: 0 3px 2px #EDEDED;
     height: 20px;
     position: absolute;
@@ -32,40 +37,59 @@ div.header div.login,div.header div.register {
     width: 100px;
     cursor: pointer;
 }
-div.header div.login{
+
+div.header div.login {
     left: 16px;
 }
+
 div.header div.register {
     right: 16px;
 }
+
 div.header span {
     color: #A7A7A7;
-    font-family: bYekan,tahoma,sans-serif;
+    font-family: bYekan, tahoma, sans-serif;
     -moz-transition: color 0.08s linear 0s;
     -webkit-transition: color 0.08s linear 0s;
     -o-transition: color 0.08s linear 0s;
 }
+
 div.header span:hover {
     color: #555;
 }
 
-div.header div.login-form {
+div.header div.register-login-container {
     position: absolute;
-    top: -141px;
+    top: -180px;
     background: #F8F8F8;
     width: 100%;
-    height: 140px;
+    height: 178px;
 }
-div.header div.login-form div.login-container {
+
+div.register-form {
+    direction: rtl;
+    float: right;
+    margin: -7px 36px 0 0;
+}
+
+div.header div.login-form div.login-container, div.header div.register-form div.register-container {
     width: auto;
     float: left;
     margin-left: 95px;
     margin-top: 11px;
 }
-div.header div.login-form span.login-text {
+
+div.header div.login-form span.login-text, div.header div.register-form span.register-text {
     font-size: 61px;
     position: absolute;
-    right: 46px;
     text-shadow: 1px 1px 0 #FFFFFF;
     top: 34px;
+}
+
+div.header div.login-form span.login-text {
+    right: 46px;
+}
+
+div.header div.register-form span.register-text {
+    left: 46px;
 }

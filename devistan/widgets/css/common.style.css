@@ -1,15 +1,15 @@
 
-input.login-input[type="text"], input.login-input[type="password"] {
+input.login-input,input.register-input{
     color: #D5D5D5;
     font: bold 17px/2px Byekan;
     padding: 4px;
     width: 325px;
 }
-input.login-input[type="text"]:focus, input.login-input[type="password"]:focus {
+input.login-input:focus ,input.register-input:focus{
     color: #5B5B5B;
 }
 
-button.login-button {
+button.login-button ,button.register-button{
     font-size: 21px;
     width: 208px;
 }
