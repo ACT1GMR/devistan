@@ -116,9 +116,10 @@ div.content-container div.menu-box div.project-manager, div.content-container di
     background: none repeat scroll 0 0 #FCFCFC;
     border: 1px solid #E4E4E4;
     border-radius: 2px 2px 2px 2px;
+    box-shadow: 0 2px 0 #EAEAEA;
     height: auto;
     margin: 9px;
-    min-height: 140px;
+    min-height: 180px;
 }
 div.content-container div.menu-box div.project-manager h1, div.content-container div.menu-box div.repository h1 {
     background: none repeat scroll 0 0 #F9F9F9;
