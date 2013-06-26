@@ -1,9 +1,13 @@
 input[type="button"], button {
     background: linear-gradient(to bottom, #92D8F4 0%, #70C3E4 100%) repeat scroll 0 0 transparent;
+    background-color: #80D4F5;
     border-color: #7FBFD0 #5DA6BA #3E869A;
     border-style: solid;
     border-width: 1px;
     box-shadow: 0 1px 0 #DDDDDD, 0 1px 0 rgba(255, 255, 255, 0.2) inset;
+    -moz-box-shadow: 0 1px 0 #DDDDDD, 0 1px 0 rgba(255, 255, 255, 0.2) inset;
+    -webkit-box-shadow: 0 1px 0 #DDDDDD, 0 1px 0 rgba(255, 255, 255, 0.2) inset;
+    -o-box-shadow: 0 1px 0 #DDDDDD, 0 1px 0 rgba(255, 255, 255, 0.2) inset;
     color: #FFFFFF;
     font-family: byekan,sans-serif;
     font-size:12px;
@@ -15,22 +19,21 @@ input[type="button"], button {
 }
 input[type="button"]:hover, button:hover {
     background: linear-gradient(to bottom, #92D8F4 0%, #85CCE8 100%) repeat scroll 0 0 transparent;
-    border-color: #76B5C6 #569FB3 #3F8CA2;
-    border-style: solid;
-    border-width: 1px;
-}
-input[type="button"]:hover, button:hover {
-    background: linear-gradient(to bottom, #92D8F4 0%, #85CCE8 100%) repeat scroll 0 0 transparent;
+    background-color: #77CFF1;
     border-color: #76B5C6 #569FB3 #3F8CA2;
     border-style: solid;
     border-width: 1px;
 }
 input[type="button"]:focus, button:focus {
     background: linear-gradient(to bottom, #92D8F4 0%, #85CCE8 100%) repeat scroll 0 0 transparent;
+    background-color: #93D9F5;
     border-color: #5EA2B5 #569FB3 #3F8CA2;
     border-style: solid;
     border-width: 1px;
     box-shadow: 0 1px 0 #FFFFFF, 0 1px 3px rgba(101, 101, 101, 0.3) inset;
+    -o-box-shadow: 0 1px 0 #FFFFFF, 0 1px 3px rgba(101, 101, 101, 0.3) inset;
+    -webkit-box-shadow: 0 1px 0 #FFFFFF, 0 1px 3px rgba(101, 101, 101, 0.3) inset;
+    -moz-box-shadow: 0 1px 0 #FFFFFF, 0 1px 3px rgba(101, 101, 101, 0.3) inset;
 }
 
 input[type="text"], input[type="password"], textarea {
@@ -43,6 +46,9 @@ input[type="text"], input[type="password"], textarea {
     padding: 4px;
     direction: rtl;
     -moz-transition: all 0.08s linear 0s;
+    -o-transition: all 0.08s linear 0s;
+    -webkit-transition: all 0.08s linear 0s;
+    transition: all 0.08s linear 0s;
     width: auto;
 }
 input[type="text"]:hover, input[type="password"]:hover, textarea:hover {
@@ -50,5 +56,8 @@ input[type="text"]:hover, input[type="password"]:hover, textarea:hover {
 }
 input[type="text"]:focus, input[type="password"]:focus, textarea:focus {
     box-shadow: 0 1px 2px #D9D9D9 inset,0 0 7px rgba(121, 188, 214, 0.61);
+    -moz-box-shadow: 0 1px 2px #D9D9D9 inset,0 0 7px rgba(121, 188, 214, 0.61);
+    -o-box-shadow: 0 1px 2px #D9D9D9 inset,0 0 7px rgba(121, 188, 214, 0.61);
+    -webkit-box-shadow: 0 1px 2px #D9D9D9 inset,0 0 7px rgba(121, 188, 214, 0.61);
     border-color: #3287B4;
 }
