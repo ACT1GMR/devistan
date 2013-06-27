@@ -1,4 +1,3 @@
-
 input.login-input,input.register-input{
     color: #D5D5D5;
     font: bold 17px/2px Byekan;
@@ -12,4 +11,21 @@ input.login-input:focus ,input.register-input:focus{
 button.login-button ,button.register-button{
     font-size: 21px;
     width: 208px;
+}
+div.loading {
+    background: url("images/ajax-loader.gif") no-repeat scroll 0 0 transparent;
+    height: 48px;
+    left: 45%;
+    position: absolute;
+    top: 33%;
+    width: 128px;
+}
+div.overlay {
+    background: none repeat scroll 0 0 rgba(225, 225, 225, 0.64);
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 2;
 }

@@ -4,38 +4,40 @@ define([
     "dijit/_TemplatedMixin",
     "dijit/_WidgetsInTemplateMixin",
     "dijit/layout/ContentPane",
+    "dojo/_base/lang",
     "dojo/fx",
     "dojo/dom-style",
     "dojo/text!./templates/Header.html",
     "dojo/text!./templates/loginForm.html",
     "dojo/text!./templates/registerForm.html"
-], function (declare, _WidgetBase, _TemplatedMixin, _WidgetsInTemplateMixin, ContentPane, fx, domStyle, template, loginForm, registerForm) {
-    commonLabel = {register: "ثبت نام", login: "ورود", username: "نام کاربری",
-        password: "رمز عبور", cancel: "لغو",userLogin : "ورود کاربران",email:"ایمیل",
-        userRegistration:"ثبت نام کاربران"};
+], function (declare, _WidgetBase, _TemplatedMixin, _WidgetsInTemplateMixin, ContentPane,lang, fx, domStyle, template, loginForm, registerForm) {
+
 
     cssProps = {formsHeight: 180};
     return declare([_WidgetBase, _TemplatedMixin , _WidgetsInTemplateMixin], {
         templateString: template,
         baseClass: "header",
-        register: commonLabel.register,
-        login: commonLabel.login,
 
         _loginButtonState: "not-clicked",//can clicked
-        _registerButtonClick: "not-clicked",//can clicked
+        _registerButtonClick: "not-clicked",//can clicked ,
+        constructor : function(){
+            lang.mixin(this , commonLabel)
+        },
 
         loginFormTemplate: declare([_WidgetBase , _TemplatedMixin], {
             templateString: loginForm,
 
-            username: commonLabel.username,
-            password: commonLabel.password,
-            userLogin : commonLabel.userLogin,
-            login: commonLabel.login,
             _isPasswordIsCleared: false,
             _isUsernameIsCleared: false,
+            constructor : function(){
+                lang.mixin(this , commonLabel)
+            },
             _clearOnFocus: function (e, type) {
                 if ((type === "login" && !this._isUsernameIsCleared) || (type === "password" && !this._isPasswordIsCleared))
                     e.target.value = "";
+
+            },
+            _login : function(e){
 
             },
             postCreate: function () {
@@ -53,15 +55,13 @@ define([
         registerFormTemplate: declare([_WidgetBase , _TemplatedMixin], {
             templateString: registerForm ,
 
-
-            userRegistration: commonLabel.userRegistration,
-            username:commonLabel.username,
-            email: commonLabel.email,
-            password: commonLabel.password,
-            register : commonLabel.register,
             _isPasswordIsCleared: false,
             _isUsernameIsCleared: false,
             _isEmailIsCleared: false,
+
+            constructor : function(){
+                lang.mixin(this , commonLabel)
+            },
 
             _clearOnFocus: function (e, type) {
                 if ((type === "login" && !this._isUsernameIsCleared) ||
@@ -69,6 +69,9 @@ define([
                     (type === "email" && !this._isEmailIsCleared))
                     e.target.value = "";
 
+            },
+            _register : function(e){
+               domStyle.set(this.registerFormContainerNode )
             },
             postCreate: function () {
                 var self = this;
@@ -83,14 +86,14 @@ define([
                 this.registerPasswordNode.onfocus = function (e) {
                     self._clearOnFocus(e, "password");
                     self._isPasswordIsCleared = true;
-                }
+                };
             }
 
         }),
         _loginClick: function (e) {
             if (this._loginButtonState === "not-clicked") {
                 domStyle.set(this.registerNode, "display", "none");
-                this.loginButtonNode.innerHTML = commonLabel.cancel;
+                this.loginButtonNode.innerHTML = this.cancel;
                 this._destroySubWidget();
                 this._showHideSlide("not-clicked");
                 this.loginFormNode.addChild(new this.loginFormTemplate());
@@ -99,13 +102,13 @@ define([
                 this._showHideSlide("clicked");
                 this._loginButtonState = "not-clicked";
                 domStyle.set(this.registerNode, "display", "");
-                this.loginButtonNode.innerHTML = commonLabel.login;
+                this.loginButtonNode.innerHTML = this.login;
             }
         },
         _registerClick: function (e) {
             if (this._registerButtonClick === "not-clicked") {
                 domStyle.set(this.loginNode, "display", "none");
-                this.registerButtonNode.innerHTML = commonLabel.cancel;
+                this.registerButtonNode.innerHTML = this.cancel;
                 this._destroySubWidget();
                 this._showHideSlide("not-clicked");
                 this.registerFormNode.addChild(new this.registerFormTemplate());
@@ -114,7 +117,7 @@ define([
                 this._showHideSlide("clicked");
                 this._registerButtonClick = "not-clicked";
                 domStyle.set(this.loginNode, "display", "");
-                this.registerButtonNode.innerHTML = commonLabel.register;
+                this.registerButtonNode.innerHTML = this.register;
             }
         },
         _showHideSlide: function (state) {

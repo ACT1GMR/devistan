@@ -8,8 +8,12 @@
     src: url('fonts/BYekan.eot?#') format('eot'), url('fonts/BYekan.woff') format('woff'), url('fonts/BYekan.ttf') format('truetype');
 }
 
+*{
+    font-family: byekan,tahoma,sans-serif;
+}
 body {
     min-height: 600px;
+    min-width: 800px;
 }
 
 html, body {
@@ -56,7 +60,6 @@ div.header div.register {
 
 div.header span {
     color: #A7A7A7;
-    font-family: bYekan, tahoma, sans-serif;
     -moz-transition: color 0.08s linear 0s;
     -webkit-transition: color 0.08s linear 0s;
     -o-transition: color 0.08s linear 0s;
@@ -102,6 +105,64 @@ div.header div.login-form span.login-text {
 div.header div.register-form span.register-text {
     left: 46px;
 }
+
+/*menu design*/
+div.menu-container {
+    position: relative;
+    top: 12px;
+    width: 100%;
+}
+
+div.menu-container ul {
+    position: relative;
+    text-align: center;
+    width: 100%;
+}
+
+div.menu-container ul li {
+    background: none repeat scroll 0 0 #F8F8F8;
+    border: 1px solid #DEDEDE;
+    box-shadow: 0 1px 0 #FFFFFF inset, 0 1px 0 #C4C4C4;
+    cursor: pointer;
+    display: inline-block;
+    margin: -3px;
+    padding: 10px;
+    position: relative;
+    width: 17%;
+}
+
+div.menu-container ul li:last-child {
+    border-radius: 0 3px 3px 0;
+}
+
+div.menu-container ul li.selected {
+    border-top: 1px solid #42B6C5;
+}
+
+div.menu-container ul li:first-child {
+    border-radius: 3px 0 0 3px;
+}
+
+div.menu-container ul li:hover {
+    background: none repeat scroll 0 0 #FFFCDA;
+}
+
+div.menu-container ul li:hover a {
+    color: #626262;
+}
+
+div.menu-container ul li.selected a {
+    color: #000;
+    font-weight: bold;
+}
+
+div.menu-container ul li a {
+    color: #626262;
+    font-size: 13px;
+    text-decoration: none;
+}
+
+
 /*content design */
 
 div.content-container {
@@ -120,32 +181,36 @@ div.content-container div.menu-box div.project-manager, div.content-container di
     background: none repeat scroll 0 0 #FCFCFC;
     border: 1px solid #E4E4E4;
     border-radius: 2px 2px 2px 2px;
-    box-shadow: 0 2px 0 #EAEAEA;
+    box-shadow: 0 3px 0 #EAEAEA;
     height: auto;
     margin: 9px;
     min-height: 180px;
 }
+
 div.content-container div.menu-box div.project-manager h1, div.content-container div.menu-box div.repository h1 {
     background: none repeat scroll 0 0 #F9F9F9;
     border-bottom: 1px solid #EBEBEB;
     box-shadow: 0 1px 0 #FFFFFF inset;
     color: #9D9D9D;
-    font-family: byekan,arial,sans-serif;
     padding: 6px 0 7px;
     text-align: center;
     width: 100%;
 }
-div.content-container div.content-box{
+
+div.content-container div.content-box {
 
 }
-div.content-container div.content-box div.content{
+
+div.content-container div.content-box div.content {
 
 }
+/*footer design */
 div.page-container {
     height: auto !important;
     margin: 0 auto -41px;
     min-height: 100%;
 }
+
 div.footer, div.push {
     height: 42px;
 }
@@ -157,55 +222,16 @@ div.footer {
     float: right;
     width: 100%;
 }
+
 div.footer div.devistan-logo {
 }
+
 div.footer div.devistan-logo span {
     color: #C1C1C1;
-    font: 27px byekan,tahoma,serif;
+    font-size: 27px;
     left: 7px;
     position: relative;
     text-shadow: 1px 1px 0 #FFFFFF;
-    top: -3px;
+    top: 4px;
 }
-/*menu design*/
-div.menu-container {
-    position: relative;
-    top: 12px;
-    width: 100%;
-}
-div.menu-container ul {
-    position: relative;
-    text-align: center;
-    width: 100%;
-}
-div.menu-container ul li {
-    background: none repeat scroll 0 0 #F8F8F8;
-    border: 1px solid #F2F2F2;
-    box-shadow: 0 1px 0 #FFFFFF inset;
-    cursor: pointer;
-    display: inline-block;
-    margin: -3px;
-    padding: 10px;
-    position: relative;
-    width: 17%;
-}
-div.menu-container ul li:hover {
-    background: none repeat scroll 0 0 #FBFAE9;
-}
-div.menu-container ul li:hover a {
-    color: #626262;
-}
-div.menu-container ul li:last-child {
-    border-radius: 0 3px 3px 0;
-}
-div.menu-container ul li.selected {
-    border-top: 1px solid #42B6C5;
-}
-div.menu-container ul li:first-child {
-    border-radius: 3px 0 0 3px;
-}
-div.menu-container ul li a {
-    color: #BCBABA;
-    font: 13px byekan,sans-serif;
-    text-decoration: none;
-}
+

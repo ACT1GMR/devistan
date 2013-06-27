@@ -1,16 +1,28 @@
 <div class="register-container">
-    <span class="register-text">${userRegistration}</span>
-    <p>
-        <input type="text" class="register-input" id="username" value="${username}" data-dojo-attach-point="registerUsernameNode"/>
-    </p>
-    <p>
-        <input type="text" class="register-input" id="email" value="${email}" data-dojo-attach-point="registerEmailNode"/>
-    </p>
-    <p>
-        <input type="password" class="register-input" id="password" value="${password}" data-dojo-attach-point="registerPasswordNode"/>
-    </p>
-    <p>
-        <span class="register-button-puller"></span>
-        <button class="register-button">${register}</button>
-    </p>
+    <div class="overlay" data-dojo-attach-point="overlayNode" style="display: none">
+        <div data-dojo-attach-point="loadingNode" class="loading"></div>
+    </div>
+    <div data-dojo-attach-point="registerFormContainerNode">
+        <span class="register-text">${userRegistration}</span>
+
+        <p>
+            <input type="text" class="register-input" id="username" value="${username}"
+                   data-dojo-attach-point="registerUsernameNode"/>
+        </p>
+
+        <p>
+            <input type="text" class="register-input" id="email" value="${email}"
+                   data-dojo-attach-point="registerEmailNode"/>
+        </p>
+
+        <p>
+            <input type="password" class="register-input" id="password" value="${password}"
+                   data-dojo-attach-point="registerPasswordNode"/>
+        </p>
+
+        <p>
+            <span class="register-button-puller"></span>
+            <button class="register-button" data-dojo-attach-event="onclick : _register">${register}</button>
+        </p>
+    </div>
 </div>
