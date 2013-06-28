@@ -1,5 +1,7 @@
 <div class="login-container">
-    <div data-dojo-attach-point="loadingNode" class="loading"></div>
+    <div class="overlay" data-dojo-attach-point="overlayNode" style="display: none">
+        <div data-dojo-attach-point="loadingNode" class="loading"></div>
+    </div>
     <span class="login-text">${userLogin}</span>
     <p>
         <input type="text" class="login-input" id="username" value="${username}" data-dojo-attach-point="loginUsernameNode"/>

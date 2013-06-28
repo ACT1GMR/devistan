@@ -1,28 +1,55 @@
-@font-face {
-    font-family: 'BKoodakBold';
-    src: url('fonts/BKoodakBold.eot?#') format('eot'), url('fonts/BKoodakBold.woff') format('woff'), url('fonts/BKoodakBold.ttf') format('truetype');
+* {
+    font-family: byekan, tahoma, sans-serif;
 }
 
-@font-face {
-    font-family: 'BYekan';
-    src: url('fonts/BYekan.eot?#') format('eot'), url('fonts/BYekan.woff') format('woff'), url('fonts/BYekan.ttf') format('truetype');
-}
-
-*{
-    font-family: byekan,tahoma,sans-serif;
-}
 body {
     min-height: 600px;
     min-width: 800px;
+}
+
+body.login-page-context {
+
 }
 
 html, body {
     height: 100%;
 }
 
+/*login page design*/
+
+div.footer div.devistan-logo span {
+    color: #C1C1C1;
+    font-size: 27px;
+    left: 7px;
+    position: relative;
+    text-shadow: 1px 1px 0 #FFFFFF;
+    top: 4px;
+}
+
+div.login-page-demo {
+    margin: 0 auto;
+    position: relative;
+    text-align: center;
+    top: 121px;
+}
+
+div.login-page-demo span {
+    display: block;
+    color: #525252;
+
+}
+
+div.login-page-demo span.logo {
+    font-size: 145px;
+}
+
+div.login-page-demo span.text {
+    font-size: 65px;
+}
+
 /*header design*/
 
-div.header {
+div.header, div.login-page-header {
     background: none repeat scroll 0 0 #F7F7F7;
     border-bottom: 1px solid #DADADA;
     border-top: 1px solid #DADADA;
@@ -32,9 +59,24 @@ div.header {
     -webkit-box-shadow: 0 0 2px #DDD9D9;
     height: 55px;
     position: relative;
+    z-index: 3;
 }
 
-div.header div.login, div.header div.register {
+div.header div.user-controller {
+    margin: 16px 0 6px 9px;
+}
+
+div.header div.user-controller span {
+    margin-right: 4px;
+    cursor: pointer;
+    color: #474747;
+}
+
+div.header div.user-controller span:hover {
+    color: #0F476F;
+}
+
+div.login-page-header div.login, div.login-page-header div.register {
     background: none repeat scroll 0 0 #F7F7F7;
     border: 1px solid #DADADA;
     border-top: 0 none;
@@ -42,34 +84,36 @@ div.header div.login, div.header div.register {
     -moz-box-shadow: 0 3px 2px #EDEDED;
     -o-box-shadow: 0 3px 2px #EDEDED;
     -webkit-box-shadow: 0 3px 2px #EDEDED;
-    height: 20px;
+    height: 15px;
     position: absolute;
     text-align: center;
-    top: 44px;
-    width: 100px;
+    top: 55px;
+    width: 134px;
     cursor: pointer;
 }
 
-div.header div.login {
+div.login-page-header div.login {
     left: 16px;
 }
 
-div.header div.register {
+div.login-page-header div.register {
     right: 16px;
 }
 
-div.header span {
+div.login-page-header span {
     color: #A7A7A7;
+    position: relative;
+    top: -4px;
     -moz-transition: color 0.08s linear 0s;
     -webkit-transition: color 0.08s linear 0s;
     -o-transition: color 0.08s linear 0s;
 }
 
-div.header span:hover {
+div.login-page-header span:hover {
     color: #555;
 }
 
-div.header div.register-login-container {
+div.login-page-header div.register-login-container {
     position: absolute;
     top: -180px;
     background: #F8F8F8;
@@ -84,25 +128,25 @@ div.register-form {
     margin: -7px 36px 0 0;
 }
 
-div.header div.login-form div.login-container, div.header div.register-form div.register-container {
+div.login-page-header div.login-form div.login-container, div.login-page-header div.register-form div.register-container {
     width: auto;
     float: left;
     margin-left: 95px;
     margin-top: 11px;
 }
 
-div.header div.login-form span.login-text, div.header div.register-form span.register-text {
+div.login-page-header div.login-form span.login-text, div.login-page-header div.register-form span.register-text {
     font-size: 61px;
     position: absolute;
     text-shadow: 1px 1px 0 #FFFFFF;
     top: 34px;
 }
 
-div.header div.login-form span.login-text {
+div.login-page-header div.login-form span.login-text {
     right: 46px;
 }
 
-div.header div.register-form span.register-text {
+div.login-page-header div.register-form span.register-text {
     left: 46px;
 }
 
@@ -152,8 +196,8 @@ div.menu-container ul li:hover a {
 }
 
 div.menu-container ul li.selected a {
-    color: #000;
-    font-weight: bold;
+    color: #000000;
+    text-shadow: 1px 1px 0 #FFFCFC;
 }
 
 div.menu-container ul li a {
@@ -161,7 +205,6 @@ div.menu-container ul li a {
     font-size: 13px;
     text-decoration: none;
 }
-
 
 /*content design */
 
@@ -204,6 +247,7 @@ div.content-container div.content-box {
 div.content-container div.content-box div.content {
 
 }
+
 /*footer design */
 div.page-container {
     height: auto !important;

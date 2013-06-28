@@ -1,0 +1,15 @@
+<div class="login-page-header">
+    <div class="login" data-dojo-attach-point="loginNode" data-dojo-attach-event="onclick :_loginClick">
+        <span data-dojo-attach-point="loginButtonNode">${login}</span>
+    </div>
+    <div class="register" data-dojo-attach-point="registerNode" data-dojo-attach-event="onclick :_registerClick">
+        <span data-dojo-attach-point="registerButtonNode">${register}</span>
+    </div>
+    <div class="register-login-container" data-dojo-attach-point="registerLoginContainer">
+        <div data-dojo-type="dijit/layout/ContentPane" data-dojo-attach-point="loginFormNode"
+             class="login-form"></div>
+
+        <div data-dojo-type="dijit/layout/ContentPane" data-dojo-attach-point="registerFormNode"
+             class="register-form"></div>
+    </div>
+</div>
