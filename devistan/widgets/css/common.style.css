@@ -97,7 +97,7 @@ div.loading.content-page{
     left: 38%;
     top: 44%;
 }
-div.loading.login-page-header{
+div.loading.login-page-header-loading{
     left: 45%;
     top: 33%;
 }
@@ -111,10 +111,10 @@ div.overlay {
     width: 100%;
     z-index: 2;
 }
-div.overlay.content-page{
+div.overlay.login-page-header-loading{
 
 }
-div.overlay.login-page-header{
-
+div.overlay.content-page {
+    background: none repeat scroll 0 0 transparent;
 }
 

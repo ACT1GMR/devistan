@@ -62,10 +62,36 @@ div.header, div.login-page-header {
     z-index: 3;
 }
 
-div.header div.user-controller {
-    margin: 16px 0 6px 9px;
+div.header div.logo-container {
+    float: right;
+    position: relative;
+    right: 15px;
+    text-align: right;
+    top: -37px;
+    width: 80px;
+}
+div.header div.logo-container span.text, div.header div.logo-container span.logo {
+    color: #676767;
+    cursor: pointer;
+    position: relative;
+    text-shadow: 1px 1px 0 #FFFFFF;
+}
+div.header div.logo-container span.text:hover, div.header div.logo-container span.logo:hover {
+    color: #2D5266;
+}
+div.header div.logo-container span.text {
+    display: block;
+    font-size: 13px;
+    left: 5px;
+}
+div.header div.logo-container span.logo {
+    font-size: 38px;
 }
 
+div.header div.user-controller {
+    margin: 16px 0 0 25px;
+    width: 99px;
+}
 div.header div.user-controller span {
     margin-right: 4px;
     cursor: pointer;
@@ -153,11 +179,12 @@ div.login-page-header div.register-form span.register-text {
 /*menu design*/
 div.menu-container {
     position: relative;
-    top: 12px;
+    top: -17px;
     width: 100%;
 }
 
 div.menu-container ul {
+    clear: both;
     position: relative;
     text-align: center;
     width: 100%;
@@ -178,7 +205,6 @@ div.menu-container ul li {
 div.menu-container ul li:last-child {
     border-radius: 0 3px 3px 0;
 }
-
 
 div.menu-container ul li.selected {
     background: none repeat scroll 0 0 #FFFFFF;

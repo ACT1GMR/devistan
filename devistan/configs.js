@@ -12,5 +12,10 @@ commonLabel = {
     repo :"رپو",
     clone:"چک اوت",
     issues:"مشکلات",
-    userConfigs:"تنظیمات کاربری"
+    userConfigs:"تنظیمات کاربری",
+    signOut:"ساین اوت",
+    settings:"تنظیمات",
+    userInfo:"اطلاعات کاربری",
+    notification:"پیام ها",
+    devistan:"دویستان"
 };
