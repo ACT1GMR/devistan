@@ -1,10 +1,10 @@
 <div>
     <div class="menu-container">
-        <ul>
-            <li><a href="#">${repoConfigs}</a></li>
-            <li class="selected"><a href="#">${clone}</a></li>
-            <li><a href="#">${issues}</a></li>
-            <li><a href="#">${userConfigs}</a></li>
+        <ul data-dojo-attach-point="menuContainerNode">
+            <li data-dojo-attach-event="onclick :_menuItemClick"><a href="#">${repoConfigs}</a></li>
+            <li  data-dojo-attach-event="onclick :_menuItemClick" class="selected"><a href="#">${clone}</a></li>
+            <li  data-dojo-attach-event="onclick :_menuItemClick"><a href="#">${issues}</a></li>
+            <li  data-dojo-attach-event="onclick :_menuItemClick"><a href="#">${userConfigs}</a></li>
 
         </ul>
     </div>

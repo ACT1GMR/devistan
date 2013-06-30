@@ -90,10 +90,16 @@ button.login-button, button.register-button {
 div.loading {
     background: url("images/ajax-loader.gif") no-repeat scroll 0 0 transparent;
     height: 48px;
-    left: 45%;
     position: absolute;
-    top: 33%;
     width: 128px;
+}
+div.loading.content-page{
+    left: 38%;
+    top: 44%;
+}
+div.loading.login-page-header{
+    left: 45%;
+    top: 33%;
 }
 
 div.overlay {
@@ -105,3 +111,10 @@ div.overlay {
     width: 100%;
     z-index: 2;
 }
+div.overlay.content-page{
+
+}
+div.overlay.login-page-header{
+
+}
+

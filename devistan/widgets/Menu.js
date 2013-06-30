@@ -13,6 +13,16 @@ define([
         templateString: template,
         constructor: function () {
             lang.mixin(this, commonLabel)
+        },
+        _menuItemClick : function(e){
+            e.stopPropagation();
+
+          $(Content.overlayNode).fadeIn(100);
+          $("li",this.menuContainerNode).removeClass("selected");
+          $(e.currentTarget).addClass("selected");
+            setTimeout(function(){
+                $(Content.overlayNode).fadeOut(100);
+            },3000);
         }
     })
 });

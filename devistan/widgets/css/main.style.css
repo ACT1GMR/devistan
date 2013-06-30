@@ -179,7 +179,9 @@ div.menu-container ul li:last-child {
     border-radius: 0 3px 3px 0;
 }
 
+
 div.menu-container ul li.selected {
+    background: none repeat scroll 0 0 #FFFFFF;
     border-top: 1px solid #42B6C5;
 }
 
@@ -245,7 +247,12 @@ div.content-container div.content-box {
 }
 
 div.content-container div.content-box div.content {
-
+    height: auto;
+    left: 4px;
+    min-height: 376px;
+    position: relative;
+    top: 43px;
+    width: 57%;
 }
 
 /*footer design */
