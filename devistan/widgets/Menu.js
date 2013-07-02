@@ -15,8 +15,7 @@ define([
             lang.mixin(this, commonLabel)
         },
         _menuItemClick : function(e){
-            e.stopPropagation();
-
+            urilObject.createGrowl(false);
           $(Content.overlayNode).fadeIn(100);
           $("li",this.menuContainerNode).removeClass("selected");
           $(e.currentTarget).addClass("selected");

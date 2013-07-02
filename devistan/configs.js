@@ -17,5 +17,7 @@ commonLabel = {
     settings:"تنظیمات",
     userInfo:"اطلاعات کاربری",
     notification:"پیام ها",
-    devistan:"دویستان"
+    devistan:"دویستان",
+    messageBoxTest : "این یک تست فقط برای نشان دادن پیغام هاست جدی نگیرید",
+    messageBoxTestHeader :"پیغام"
 };
